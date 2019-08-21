@@ -1,0 +1,12 @@
+.root, .option-input-group, .option-input {
+    padding: 15px;
+    margin: 15px;
+}
+
+.option-input, .array {
+    width: max-content;
+}
+
+.option-change, .option-label {
+    margin: 7px;
+}

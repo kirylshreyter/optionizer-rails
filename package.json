@@ -1,0 +1,23 @@
+{
+  "name": "optionizer-rails",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.3",
+    "browserify-incremental": "^3.0.1",
+    "rc-color-picker": "^1.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-draggable": "^3.3.0",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  }
+}
