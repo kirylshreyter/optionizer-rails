@@ -12,3 +12,4 @@
 .idea
 node_modules
 spec/dummy/tmp/
+spec/dummy/log/

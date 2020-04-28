@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Optionizer::Rails::Engine => '/'
+  root to: 'home#index'
 end

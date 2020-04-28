@@ -1,8 +1,9 @@
-require "optionizer/rails/version"
-require "active_support"
-require "action_view"
+require 'optionizer/rails/version'
+require 'active_support'
+require 'action_view'
 require 'react-rails'
 require 'browserify-rails'
+require 'slim'
 
 module Optionizer
   module Rails
@@ -14,8 +15,8 @@ module Optionizer
           config.browserify_rails.commandline_options = '--transform -t babelify'
           config.browserify_rails.source_map_environments << 'development'
           config.browserify_rails.paths = [
-            lambda { |p| p.start_with?(Engine.root.join('node_modules').to_s) },
-            lambda { |p| p.start_with?(Engine.root.join('vendor/assets/javascripts/components').to_s) },
+            ->(p) { p.start_with?(Engine.root.join('node_modules').to_s) },
+            ->(p) { p.start_with?(Engine.root.join('vendor/assets/javascripts/components').to_s) }
           ]
           config.browserify_rails.node_bin = Engine.root.join('node_modules', '.bin').to_s
         end
@@ -45,7 +46,7 @@ module Optionizer
     autoload :StringValue,           'optionizer/rails/models/string_value'
     autoload :SymbolValue,           'optionizer/rails/models/symbol_value'
 
-    #Presenters
+    # Presenters
     autoload :BasePresenter,         'optionizer/rails/presenters/base_presenter'
     autoload :BooleanValuePresenter, 'optionizer/rails/presenters/boolean_value_presenter'
     autoload :NilValuePresenter,     'optionizer/rails/presenters/nil_value_presenter'
@@ -56,16 +57,16 @@ module Optionizer
     autoload :SymbolValuePresenter,  'optionizer/rails/presenters/symbol_value_presenter'
     autoload :OptionValuePresenter,  'optionizer/rails/presenters/option_value_presenter'
 
-    #Shared
+    # Shared
     autoload :Shared,                'optionizer/rails/shared/shared'
 
-    #Interfaces
+    # Interfaces
     autoload :PresentersInterface,   'optionizer/rails/interfaces/presenters_interface'
 
     # Parser
     autoload :OptionParser,          'optionizer/rails/option_parser'
 
-    ActionView::Base.send(:include, OptionHelper)
+    ActionView::Base.include(OptionHelper)
     ActionController::Base.send(:prepend_view_path, "#{File.expand_path('../..', __FILE__)}/optionizer/rails/views")
   end
 end
