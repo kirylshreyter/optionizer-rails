@@ -1,0 +1,77 @@
+AllCops:
+  TargetRubyVersion: 2.7.1
+
+Layout/LineLength:
+  Max: 120
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+ 
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: true
+
+Style/FormatString:
+  Enabled: true
+
+Style/RaiseArgs:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+
+Style/DoubleNegation:
+  Enabled: true
+
+Naming/AccessorMethodName:
+  Enabled: true
+
+Style/RescueModifier:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 70
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
